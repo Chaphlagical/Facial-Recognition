@@ -19,7 +19,6 @@ def count_dirs(path):
         count+=1
     return count
 
-
 #改变图片亮度与对比度
 def relight (img,light=1,bias=0):
     w=img.shape[1]
@@ -54,16 +53,12 @@ def get_faces_from_videoes(ranges,path,out_path):
                     pass
                 # 从摄像头读取照片
                 success, img = camera.read()
-
-
                 if not camera.read():
                     break
-
                 # 转为灰度图
                 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
                 # 使用detector进行人脸检测
                 dets = detector(gray_img, 1)
-
                 if not len(dets):
                     # print('Can`t get face.')
                     cv2.imshow('img', img)
@@ -71,7 +66,6 @@ def get_faces_from_videoes(ranges,path,out_path):
                     if key == 27:
                         sys.exit(0)
                     pass
-
                 for i, d in enumerate(dets):
                     x1 = d.top() if d.top() > 0 else 0
                     y1 = d.bottom() if d.bottom() > 0 else 0
@@ -94,9 +88,6 @@ def get_faces_from_videoes(ranges,path,out_path):
                 break
         except:
             break
-
-
-
 
 for dir in os.listdir(input_dir):
     dirs = output_dir + '/' + dir

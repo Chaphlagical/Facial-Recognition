@@ -103,4 +103,4 @@ for dir in os.listdir(input_dir):
     index=1
     for x in os.listdir(input_dir+'/'+dir):
         video_path=input_dir+'/'+dir+'/'+x
-        get_faces_from_videoes(12000,video_path,dirs)
+        get_faces_from_videoes(number,video_path,dirs)

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/chaf/Simple_CNN_Facial_recognition/model/train.model.ckpt-1900"
+all_model_checkpoint_paths: "/home/chaf/Simple_CNN_Facial_recognition/model/train.model.ckpt-1900"
